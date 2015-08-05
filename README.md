@@ -19,6 +19,6 @@
 People say things like "we just want to get this thing quickly...so just write it sloppy, write it fast." But it turns out that if you write it sloppy it will take more of the second kind of time. _Having a style guide in place will help us to avoid the second kind of time. It will help us to **"always take the time to code well."**_
 
 #####A parting quote:
-*"A good writer will slavishly conform to the elements of style and express his creativity in his words, in his structures, in his images. You don't need to be messing with punctuation in order to prove you are creative."*
+*"A good writer will slavishly conform to the elements of style and express his creativity in his words, in his structures, in his images. You don't need to be messing with punctuation in order to prove you are creative."* - Douglas Crockford
 
 ######Ideas taken from [this Douglas Crockford talk.](https://www.youtube.com/watch?v=bo36MrBfTk4)
