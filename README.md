@@ -10,9 +10,9 @@
 - A Foot Gun is a feature that you use to shoot yourself in the foot, and he admits that he put a lot of those into JavaScript.
 - "*Just because a foot gun is in the language, doesn't necessarily mean you want to be shooting your foot off."*
 - Because there are so many foot guns in JavaScript, you have to program with a lot of discipline.
-- The same principle applies to Sass. Just because we can next selectors endlessly, doesn't mean we should.
+- The same principle applies to Sass. Just because we can nest selectors endlessly, doesn't mean we should.
 
-####There are two types of time spent in writing programs. 
+####Crockford talks about two types of time spent in writing programs:
 - The time it takes to write the code.
 - The time it takes to make the code work right.
 
