@@ -1,5 +1,5 @@
 
-# Stepframe ES5 JavaScript Style Guide() {
+# steframeJsStyleGuide() {
 
 ## Table of Contents
 
