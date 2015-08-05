@@ -1671,8 +1671,7 @@
   - **Option 3** - The jQuery site [warns against using anonymous functions](https://learn.jquery.com/code-organization/beware-anonymous-functions/) (even for document ready), but our sites are so small that I think using an anonymous function for document ready shouldn't be out of the question. Another option might be to put everything in an Immediately Invoked Function Expression (IIFE) and init the app similarly to how we've been doing:
 
     ```javascript
-
-    // An option
+    // Something like this
     (function() {
 
         var appVar1,
@@ -1700,11 +1699,6 @@
     }());
 
     // Or maybe we use object literals inside of the IIFE to group things
-    //    (I don't like this method as much because you either have to put the
-    //     app object above the document ready (which bugs me for some reason), or you have
-    //     to rely on the fact that the document ready has a delay before it runs.
-    //     If there was no delay, then app would be undefined when document ready ran,
-    //      since the app object definition isn't hoisted.)
     (function() {
 
         var appVar1,
@@ -1712,6 +1706,8 @@
 
         $(document).ready(function() {
 
+            // Do we have init logic in the document ready,
+            //   or have an init function in the app object?
             app.someFunc();
 
             // Events
@@ -1724,14 +1720,57 @@
 
             },
 
-            thing1ClickHandler() {
+            thing1ClickHandler: function() {
                 ...
             },
 
-            thing2ClickHandler() {
+            thing2ClickHandler: function() {
                 ...
             }
         }
+    }());
+
+    // Or the revealing module pattern for grouping things
+    (function() {
+
+        var appVar1,
+            appVar2;
+
+        $(document).ready(function() {
+
+            // Do we have init logic in the document ready,
+            //   or have an init function in the app object?
+            app.someFunc();
+
+            // Events
+            $('.thing1').on('click', app.thing1ClickHandler);
+            $('.thing2').on('click', app.thing2ClickHandler);
+        });
+
+        var app = (function() {
+
+            var privateVar = 'I am private';
+
+            // Expose the api for the app
+            return {
+                someFunc: someFunc,
+                thing1ClickHandler: thing1ClickHandler,
+                thing2ClickHandler: thing2ClickHandler
+            };
+
+            function someFunc() {
+
+            }
+
+            // Event handlers
+            function thing1ClickHandler() {
+                ...
+            }
+
+            function thing2ClickHandler() {
+                ...
+            }
+        }());
     }());
 
     ```
