@@ -712,7 +712,7 @@
 	Make use of this convention when writing plugins or larger modules, but this is not required for smaller functions in microsites.
 	Use discretion on when this is needed.
 
-```javascript
+	```javascript
 	// good
 	/**
 	 * make() returns a new element
