@@ -1685,4 +1685,5 @@
 - ESLint has a Sublime plugin as well. Details [here](https://github.com/roadhump/SublimeLinter-eslint).
 - ESLint makes use of a config file that can be placed at the root of your project. Once installed, use the [.eslintrc file](.eslintrc) in the javascript folder of this guide as the config file.
 - Our config file is commented, but you can also view all ESLint rules [here](http://eslint.org/docs/rules/).
+
 # };
