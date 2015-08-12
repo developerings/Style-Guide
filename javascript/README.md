@@ -22,7 +22,6 @@
 1. [Accessors](#accessors)
 1. [Constructors](#constructors)
 1. [Events](#events)
-1. [Modules](#modules)
 1. [jQuery](#jquery)
 	1. [jQuery Variables](#jquery-variables)
 	1. [jQuery Events](#jquery-events)
@@ -1535,7 +1534,7 @@
 ## jQuery
 
 <a name="jquery-variables"></a>
-### Variables
+### jQuery Variables
 
 - Prefix jQuery object variables with a `$`.
 
@@ -1577,7 +1576,7 @@
 	```
 
 <a name="jquery-events"></a>
-### Events
+### jQuery Events
 
 - DO NOT use anonymous functions to attach events. [They're difficult to debug, maintain, test, or reuse](https://learn.jquery.com/code-organization/beware-anonymous-functions/). Use a function declaration instead. Take advantage of the fact that function declarations get hoisted to allow for events to be grouped higher up in the function, and handlers to be grouped below. This allows for quickly scanning through the events without weeding through their implementation.
 
