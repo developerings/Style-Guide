@@ -90,7 +90,9 @@
 /**
  * Style
  */
-		"indent": [2, "tab"],                // http://eslint.org/docs/rules/indent -- indent with tabs
+		"indent": [2, "tab", {           // http://eslint.org/docs/rules/indent -- indent with tabs
+			"SwitchCase": 1
+		}],
 		"brace-style": [2, "1tbs"],      // http://eslint.org/docs/rules/brace-style -- opening brace on same line
 		"quotes": [
 			2, "single", "avoid-escape"    // http://eslint.org/docs/rules/quotes -- single quotes
@@ -119,7 +121,7 @@
 		"no-trailing-spaces": 2,         // http://eslint.org/docs/rules/no-trailing-spaces -- no trailing spaces at end of line
 		"no-underscore-dangle": 0,       // http://eslint.org/docs/rules/no-underscore-dangle -- allow dangling underscores in identifiers -- such as _varName
 		"one-var": [2, "never"],         // http://eslint.org/docs/rules/one-var -- disallow one variable declaration per function
-		"padded-blocks": [2, "never"],   // http://eslint.org/docs/rules/padded-blocks -- enforce padding within blocks
+		"padded-blocks": 0,   			 // http://eslint.org/docs/rules/padded-blocks -- enforce padding within blocks
 		"semi": [2, "always"],           // http://eslint.org/docs/rules/semi -- require use of semicolons instead of ASI
 		"semi-spacing": [2, {            // http://eslint.org/docs/rules/semi-spacing -- enforce spacing before and after semicolons
 			"before": false,
