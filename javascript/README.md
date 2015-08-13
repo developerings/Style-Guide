@@ -1680,10 +1680,40 @@
 <a name="tools"></a>
 ##Tools
 
+###ESLint
 - Use ESLint to lint your code and ensure that you are using the prescribed style and syntax choices laid out in this guide.
 	- Follow instructions on [ESLint site](http://eslint.org/docs/user-guide/getting-started) to install.
 - ESLint has a Sublime plugin as well. Details [here](https://github.com/roadhump/SublimeLinter-eslint).
 - ESLint makes use of a config file that can be placed at the root of your project. Once installed, use the [.eslintrc file](.eslintrc) in the javascript folder of this guide as the config file.
-- Our config file is commented, but you can also view all ESLint rules [here](http://eslint.org/docs/rules/).
+	- NOTE: A config file in the project directory is required in order to lint according to our rules. There is no global config for eslint.
+- ESLint rules are [here](http://eslint.org/docs/rules/).
 
+###JSBeautify
+- A nice tool to format code using a given set of rules. It's a great starting point when updating legacy code to match the conventions laid out in the style guide. Site is here http://jsbeautifier.org/
+- Sublime plugin is [here](https://github.com/enginespot/js-beautify-sublime).
+	- After installation, the following config should be used under `Preferences -> Package Settings -> JavaScript Beautify -> Settings - User`
+
+	```json
+	{
+		"indent_size": 4,
+		"indent_char": "	",
+		"indent_level": 0,
+		"indent_with_tabs": true,
+		"preserve_newlines": true,
+		"max_preserve_newlines": 10,
+		"jslint_happy": false,
+		"brace_style": "collapse",
+		"keep_array_indentation": false,
+		"keep_function_indentation": false,
+		"space_before_conditional": true,
+		"break_chained_methods": false,
+		"eval_code": false,
+		"unescape_strings": false,
+		"wrap_line_length": 0,
+
+		// jsbeautify options
+		"format_on_save": false,
+		"use_original_indentation": false
+	}
+	```
 # };
