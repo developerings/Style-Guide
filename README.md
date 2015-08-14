@@ -1,7 +1,7 @@
 # Stepframe Programming Style Guide
 
-* [JavaScript Style Guide](javascript/README.md)
-* [Sass Style Guide](sass/README.md)
+* [JavaScript Style Guide](javascript)
+* [Sass Style Guide](sass)
 
 ###Goal
 *"We want to eventually be writing with one voice. We want all of the software that we develop on a project to look as though it was written by the same person, and that person is really smart and really talented. We want everything to look like that. We don't want anybody dumbing it down."* -&nbsp;Douglas&nbsp;Crockford
