@@ -132,7 +132,7 @@
 		"space-before-function-paren": [2, "never"], // http://eslint.org/docs/rules/space-before-function-paren -- no space before function parens -- fn(), not fn ()
 		"space-infix-ops": 2,            // http://eslint.org/docs/rules/space-infix-ops -- require spaces around operators -- 5 + 4 = 10   not    5+4=10
 		"space-return-throw-case": 2,    // http://eslint.org/docs/rules/space-return-throw-case -- require a space after return, throw, and case
-		"spaced-comment": 2,            // http://eslint.org/docs/rules/spaced-comment -- require a space immediately following the // or /* in a comment -- // this is valid -- //this is not
+		"spaced-comment": 0,            // http://eslint.org/docs/rules/spaced-comment -- require a space immediately following the // or /* in a comment -- // this is valid -- //this is not
 
 		"consistent-this": 0           // http://eslint.org/docs/rules/consistent-this -- enforce consistent naming when capturing the current execution context
 	}
