@@ -13,7 +13,7 @@
 		"no-shadow-restricted-names": 2, // http://eslint.org/docs/rules/no-shadow-restricted-names -- disallow shadowing of names such as arguments
 		"no-unused-vars": [2, {          // http://eslint.org/docs/rules/no-unused-vars -- disallow declaration of variables that are not used in the code (recommended)
 			"vars": "local",               // allows global vars to go unused
-			"args": "after-used"           // arguments can go unused if they are not the first argument
+			"args": "none"           // arguments can go unused if they are not the first argument
 		}],
 		"no-use-before-define": [2, "nofunc"], // http://eslint.org/docs/rules/no-use-before-define -- disallow use of variables before they are defined
 
@@ -22,7 +22,7 @@
  */
 		"comma-dangle": 2,               // http://eslint.org/docs/rules/comma-dangle -- disallow or enforce trailing commas (recommended)
 		"no-cond-assign": [2, "always"], // http://eslint.org/docs/rules/no-cond-assign -- disallow assignment in conditional expressions (recommended)
-		"no-console": 1,                 // http://eslint.org/docs/rules/no-console -- disallow use of console in the node environment (recommended)
+		"no-console": 0,                 // http://eslint.org/docs/rules/no-console -- disallow use of console in the node environment (recommended)
 		"no-debugger": 1,                // http://eslint.org/docs/rules/no-debugger -- disallow use of debugger (recommended)
 		"no-alert": 1,                   // http://eslint.org/docs/rules/no-alert -- disallow the use of alert, confirm, and prompt
 		"no-constant-condition": 1,      // http://eslint.org/docs/rules/no-constant-condition -- disallow use of constant expressions in conditions (recommended) -- if (true)
