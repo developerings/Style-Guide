@@ -1688,6 +1688,30 @@
 	- NOTE: A config file in the project directory is required in order to lint according to our rules. There is no global config for eslint.
 - ESLint rules are [here](http://eslint.org/docs/rules/).
 
+####Note
+If you ever find yourself needing to have eslint ignore a specific line (for a really good reason!),
+[this post](https://stackoverflow.com/questions/27732209/turning-off-eslint-rule-for-a-specific-line) can help.
+#####To ignore a specific rule on a single line (in this case, the "indent" rule):
+
+```javascript
+		function someLineWithErrors() { // eslint-disable-line indent
+		...
+	}
+```
+
+#####To disable eslint for a block of code
+
+```javascript
+	/*eslint-disable */
+	function someLinesWithErrors() {
+			var doubleIndent;
+		var singleIndent;
+	}
+	/*eslint-enable */
+```
+
+Just don't go disabling eslint for all your stuff. That would be _**#losing**_.
+
 ###JSBeautify
 - A nice tool to format code using a given set of rules. It's a great starting point when updating legacy code to match the conventions laid out in the style guide. Site is here http://jsbeautifier.org/
 - Sublime plugin is [here](https://github.com/enginespot/js-beautify-sublime).
