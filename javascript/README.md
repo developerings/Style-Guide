@@ -39,28 +39,28 @@
 	+ `null`
 	+ `undefined`
 
-	```javascript
+```javascript
 	var foo = 1;
 	var bar = foo;
 
 	bar = 9;
 
 	console.log(foo, bar); // => 1, 9
-	```
+```
 - **Complex**: When you access a complex type you work on a reference to its value.
 
 	+ `object`
 	+ `array`
 	+ `function`
 
-	```javascript
+```javascript
 	var foo = [1, 2];
 	var bar = foo;
 
 	bar[0] = 9;
 
 	console.log(foo[0], bar[0]); // => 9, 9
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -69,17 +69,17 @@
 
 - Use the literal syntax for object creation.
 
-	```javascript
+```javascript
 	// bad
 	var item = new Object();
 
 	// good
 	var item = {};
-	```
+```
 
 - Don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8. [More info](https://github.com/airbnb/javascript/issues/61).
 
-	```javascript
+```javascript
 	// bad
 	var superman = {
 		default: { clark: 'kent' },
@@ -91,11 +91,11 @@
 		defaults: { clark: 'kent' },
 		hidden: true
 	};
-	```
+```
 
 - Use readable synonyms in place of reserved words.
 
-	```javascript
+```javascript
 	// bad
 	var superman = {
 		class: 'alien'
@@ -110,10 +110,10 @@
 	var superman = {
 		type: 'alien'
 	};
-	```
+```
 
 - Place the colon immediately after the key, and add a space after the colon:
-	```javascript
+```javascript
 	// bad
 	var superman = {
 		type : 'alien'
@@ -128,7 +128,7 @@
 	var superman = {
 		type: 'alien'
 	}
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -137,17 +137,17 @@
 
 - Use the literal syntax for array creation.
 
-	```javascript
+```javascript
 	// bad
 	var items = new Array();
 
 	// good
 	var items = [];
-	```
+```
 
 - Use Array#push instead of direct assignment to add items to an array.
 
-	```javascript
+```javascript
 	var someStack = [];
 
 	// bad
@@ -155,11 +155,11 @@
 
 	// good
 	someStack.push('abracadabra');
-	```
+```
 
 - When you need to copy an array use Array#slice. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
 
-	```javascript
+```javascript
 	var len = items.length;
 	var itemsCopy = [];
 	var i;
@@ -171,11 +171,11 @@
 
 	// good
 	itemsCopy = items.slice();
-	```
+```
 
 - When looping, favor forEach over a standard for loop because of readability. Use the naming convention of el, i, arr for the arguments (element, index, array). For IE8 and below, use polyfill from [mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
 
-	```javascript
+```javascript
 	// okay
 	function() {
 
@@ -197,7 +197,7 @@
 			console.log(el);
 		});
 	}
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -207,7 +207,7 @@
 
 - Use single quotes `''` for strings.
 
-	```javascript
+```javascript
 	// bad
 	var name = "Bob Parr";
 
@@ -219,7 +219,7 @@
 
 	// good
 	var fullName = 'Bob ' + this.lastName;
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -229,7 +229,7 @@
 
 - Function expressions:
 
-	```javascript
+```javascript
 	// anonymous function expression
 	var anonymous = function() {
 
@@ -241,21 +241,21 @@
 
 		console.log('Welcome to the Internet. Please follow me.');
 	})(window, jQuery, 'awesome');
-	```
+```
 
 - Function declarations:
 
-	```javascript
+```javascript
 	function someFunc() {
 
 		return true;
 	}
-	```
+```
 
 - Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.
 - **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
-	```javascript
+```javascript
 	// bad
 	if (currentUser) {
 		function test() {
@@ -272,11 +272,11 @@
 			console.log('Yup.');
 		};
 	}
-	```
+```
 
 - Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
 
-	```javascript
+```javascript
 	// bad
 	function nope(name, options, arguments) {
 
@@ -288,7 +288,7 @@
 
 		// ...stuff...
 	}
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -298,7 +298,7 @@
 
 - Use dot notation when accessing properties.
 
-	```javascript
+```javascript
 	var luke = {
 		jedi: true,
 		age: 28
@@ -309,11 +309,11 @@
 
 	// good
 	var isJedi = luke.jedi;
-	```
+```
 
 - Use subscript notation `[]` when accessing properties with a variable.
 
-	```javascript
+```javascript
 	var luke = {
 		jedi: true,
 		age: 28
@@ -325,7 +325,7 @@
 	}
 
 	var isJedi = getProp('jedi');
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -334,17 +334,17 @@
 
 - Always use `var` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that.
 
-	```javascript
+```javascript
 	// bad
 	superPower = new SuperPower();
 
 	// good
 	var superPower = new SuperPower();
-	```
+```
 
 - Declare variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting related issues. JavaScript is function scoped, not block scoped, so the top of a variable's scope is the top of the function.
 
-	```javascript
+```javascript
 	// bad
 	function() {
 
@@ -409,11 +409,11 @@
 		}
 	}
 
-	```
+```
 
 - When performing error checking before continuing in a function, avoid unnecessary logic prior to the error check.
 
-	```javascript
+```javascript
 	// bad - unnecessary call to getName()
 	function() {
 
@@ -442,12 +442,12 @@
 
 		return true;
 	}
-	```
+```
 
 - Use one `var` declaration per variable. It's easier to add new variable declarations this way, and you never have
 	to worry about swapping out a `;` for a `,` or introducing punctuation-only diffs. **The only exception to this rule is in the case of counters**.
 
-	```javascript
+```javascript
 	// bad
 	var items = getItems(),
 		goSportsTeam = true,
@@ -464,7 +464,7 @@
 	var items = getItems();
 	var goSportsTeam = true;
 	var dragonball = 'z';
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -473,7 +473,7 @@
 
 - Variable declarations get hoisted to the top of their scope, but their assignment does not.
 
-	```javascript
+```javascript
 	// we know this wouldn't work (assuming there
 	// is no notDefined global variable)
 	function example() {
@@ -500,11 +500,11 @@
 		console.log(declaredButNotAssigned); // => undefined
 		declaredButNotAssigned = true;
 	}
-	```
+```
 
 - Anonymous function expressions hoist their variable name, but not the function assignment.
 
-	```javascript
+```javascript
 	function example() {
 
 		console.log(anonymous); // => undefined
@@ -516,11 +516,11 @@
 			console.log('anonymous function expression');
 		};
 	}
-	```
+```
 
 - Named function expressions hoist the variable name, not the function name or the function body.
 
-	```javascript
+```javascript
 	function example() {
 
 		console.log(named); // => undefined
@@ -548,11 +548,11 @@
 			console.log('named');
 		}
 	}
-	```
+```
 
 - Function declarations hoist their name and the function body.
 
-	```javascript
+```javascript
 	function example() {
 
 		superPower(); // => Flying
@@ -562,7 +562,7 @@
 			console.log('Flying');
 		}
 	}
-	```
+```
 
 - For more information refer to [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting) by [Ben Cherry](http://www.adequatelygood.com/).
 
@@ -573,7 +573,7 @@
 ## Comparison Operators & Equality
 
 - Use `===` and `!==` over `==` and `!=`. The only exception to this is when checking for null or undefined.
-	```javascript
+```javascript
 	var sponge = 'bob';
 
 	// bad
@@ -592,7 +592,7 @@
 	if (sponge == null) {
 		...
 	}
-	```
+```
 
 - Conditional statements such as the `if` statement evaluate their expression using coercion with the `ToBoolean` abstract method and always follow these simple rules:
 
@@ -603,16 +603,16 @@
 	+ **Numbers** evaluate to **false** if **+0, -0, or NaN**, otherwise **true**
 	+ **Strings** evaluate to **false** if an empty string `''`, otherwise **true**
 
-	```javascript
+```javascript
 	if ([0]) {
 		// true
 		// An array is an object, objects evaluate to true
 	}
-	```
+```
 
 - Use shortcuts.
 
-	```javascript
+```javascript
 	// bad
 	if (name !== '') {
 		// ...stuff...
@@ -632,7 +632,7 @@
 	if (collection.length) {
 		// ...stuff...
 	}
-	```
+```
 
 - For more information see [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) by Angus Croll.
 
@@ -643,7 +643,7 @@
 
 - Use braces with all blocks.
 
-	```javascript
+```javascript
 	// bad
 	if (test)
 		return false;
@@ -664,12 +664,12 @@
 
 		return false;
 	}
-	```
+```
 
 - If you're using multi-line blocks with `if` and `else`, put `else` on the same line as your
 	`if` block's closing brace.
 
-	```javascript
+```javascript
 	// bad
 	if (test) {
 		thing1();
@@ -686,10 +686,10 @@
 	} else {
 		thing3();
 	}
-	```
+```
 
 - Always put a single space after conditionals
-	```javascript
+```javascript
 	// bad
 	if(test) {
 	...
@@ -699,7 +699,7 @@
 	if (test) {
 
 	}
-	```
+```
 
 
 **[⬆ back to top](#table-of-contents)**
@@ -711,7 +711,7 @@
 	Make use of this convention when writing plugins or larger modules, but this is not required for smaller functions in microsites.
 	Use discretion on when this is needed.
 
-	```javascript
+```javascript
 	// good
 	/**
 	 * make() returns a new element
@@ -726,11 +726,11 @@
 
 		return element;
 	}
-	```
+```
 
 - Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.
 
-	```javascript
+```javascript
 	// bad
 	var active = true;  // is current tab
 
@@ -758,11 +758,11 @@
 
 		return type;
 	}
-	```
+```
 
 - Use `// TODO:` to annotate solutions to problems or to point out something that needs fixing. These are different than regular comments because they are actionable.
 
-	```javascript
+```javascript
 	function Calculator() {
 
 		// TODO: total should be configurable by an options param
@@ -770,7 +770,7 @@
 
 		return this;
 	}
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -779,7 +779,7 @@
 
 - Use hard tabs.
 
-	```javascript
+```javascript
 	// bad
 	function() {
 
@@ -791,11 +791,11 @@
 
 	→	var name;
 	}
-	```
+```
 
 - Place 1 space before the leading brace.
 
-	```javascript
+```javascript
 	// bad
 	function test(){
 
@@ -819,11 +819,11 @@
 		age: '1 year',
 		breed: 'Bernese Mountain Dog'
 	});
-	```
+```
 
 - Place 1 space before the opening parenthesis in control statements (`if`, `while` etc.). Place no space before the argument list in function calls and declarations.
 
-	```javascript
+```javascript
 	// bad
 	if(isJedi) {
 		fight ();
@@ -845,48 +845,48 @@
 
 		console.log('Swooosh!');
 	}
-	```
+```
 
 - Leave space on either side of all operators.
 
-	```javascript
+```javascript
 	// bad
 	var x=y+5;
 
 	// good
 	var x = y + 5;
-	```
+```
 
 - End files with a single newline character.
 
-	```javascript
+```javascript
 	// bad
 	(function(global) {
 
 		// ...stuff...
 	})(this);
-	```
+```
 
-	```javascript
+```javascript
 	// bad
 	(function(global) {
 
 		// ...stuff...
 	})(this);↵
 	↵
-	```
+```
 
-	```javascript
+```javascript
 	// good
 	(function(global) {
 
 		// ...stuff...
 	})(this);↵
-	```
+```
 
 - Avoid trailing whitespace with editor settings
 
-	```javascript
+```javascript
 	// In Sublime Text User Settings
 	{
 		"trim_trailing_white_space_on_save": true
@@ -896,13 +896,13 @@
 	{
 		"files.trimTrailingWhitespace": true
 	}
-	```
+```
 
 - Use indentation when making long method chains. Use a leading dot, which
 	emphasizes that the line is a method call, not a new statement. Up to 3
 	items may be chained before switching to the indented method.
 
-	```javascript
+```javascript
 	// bad
 	$('#items').find('.selected').highlight().end().find('.open').updateCount();
 
@@ -937,11 +937,11 @@
 		.append('svg:g')
 			.attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
 			.call(tron.led);
-	```
+```
 
 - Leave a blank line after blocks that are not properties of an object and before the next statement
 
-	```javascript
+```javascript
 	// bad
 	if (foo) {
 		return bar;
@@ -973,7 +973,7 @@
 	};
 
 	return obj;
-	```
+```
 
 
 **[⬆ back to top](#table-of-contents)**
@@ -983,7 +983,7 @@
 
 - Leading commas: **Nope.**
 
-	```javascript
+```javascript
 	// bad
 	var story = [
 			once
@@ -1013,13 +1013,13 @@
 		heroName: 'Mr. Incredible',
 		superPower: 'strength'
 	};
-	```
+```
 
 - Additional trailing comma: **Nope.** This can cause problems with IE6/7 and IE9 if it's in quirksmode. Also, in some implementations of ES3 would add length to an array if it had an additional trailing comma. This was clarified in ES5 ([source](http://es5.github.io/#D)):
 
 > Edition 5 clarifies the fact that a trailing comma at the end of an ArrayInitialiser does not add to the length of the array. This is not a semantic change from Edition 3 but some implementations may have previously misinterpreted this.
 
-	```javascript
+```javascript
 	// bad
 	var hero = {
 		firstName: 'Kevin',
@@ -1041,7 +1041,7 @@
 		'Batman',
 		'Superman'
 	];
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1050,7 +1050,7 @@
 
 - **Yup.**
 
-	```javascript
+```javascript
 	// bad
 	(function() {
 
@@ -1071,7 +1071,7 @@
 		var name = 'Skywalker';
 		return name;
 	})();
-	```
+```
 
 	[Read more](http://stackoverflow.com/a/7365214/1712802).
 
@@ -1083,7 +1083,7 @@
 - Perform type coercion at the end of the statement or use `toString`.
 - Strings:
 
-	```javascript
+```javascript
 	//  => this.reviewScore = 9;
 
 	// bad
@@ -1097,11 +1097,11 @@
 
 	// good
 	var totalScore = this.reviewScore + ' total score';
-	```
+```
 
 - Use `parseInt` for Numbers and always with a radix for type casting.
 
-	```javascript
+```javascript
 	var inputValue = '4';
 
 	// bad
@@ -1121,7 +1121,7 @@
 
 	// gooder
 	var val = parseInt(inputValue, 10);
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1130,7 +1130,7 @@
 
 - Avoid single letter names. Be descriptive with your naming. An exception is for i as an iterator (and j, k, for nested loops).
 
-	```javascript
+```javascript
 	// bad
 	function q() {
 
@@ -1160,11 +1160,11 @@
 					}
 			}
 	}
-	```
+```
 
 - Use camelCase when naming objects, functions, and instances.
 
-	```javascript
+```javascript
 	// bad
 	var OBJEcttsssss = {};
 	var this_is_my_object = {};
@@ -1174,11 +1174,11 @@
 	// good
 	var thisIsMyObject = {};
 	function thisIsMyFunction() {}
-	```
+```
 
 - Use PascalCase when naming constructors or classes.
 
-	```javascript
+```javascript
 	// bad
 	function user(options) {
 
@@ -1198,18 +1198,18 @@
 	var good = new User({
 		name: 'yup'
 	});
-	```
+```
 
 - Use a leading underscore `_` when naming private properties.
 
-	```javascript
+```javascript
 	// bad
 	this.__firstName__ = 'Panda';
 	this.firstName_ = 'Panda';
 
 	// good
 	this._firstName = 'Panda';
-	```
+```
 
 <a name="controlling-scope"></a>
 ## Controlling Scope
@@ -1219,7 +1219,7 @@
 - **Capture `this` in a variable in an outer closure and use that variable in place of `this`**. When saving a reference to `this` use a meaningful name.
 	If the context does is not conducive to a meaningful name, use `instance`.
 
-	```javascript
+```javascript
 	// bad
 	function() {
 
@@ -1260,11 +1260,11 @@
 			console.log(sponge);
 		}
 	}
-	```
+```
 
 - **If you have browser support (>IE9), `bind` is a nice tool**. A great description of `bind` is [here](http://stackoverflow.com/a/10115970/1647608). "Bind creates a new function that will have `this` set to the first parameter passed to `bind()`." One great use is click handlers:
 
-	```javascript
+```javascript
 	var Button = function(content) {
 
 		this.content = content;
@@ -1284,11 +1284,11 @@
 	// bound, 'this' is myButton
 	var boundClick = myButton.click.bind(myButton);
 	boundClick();
-	```
+```
 
 - **If using jQuery, another option is the `$.proxy`**. Similar to `bind`, `$.proxy` takes a function and returns a new one that will always have a particular context. Example taken from [jquery site](https://api.jquery.com/jQuery.proxy/).
 
-	```javascript
+```javascript
 	var you = {
 		type: "person",
 		test: function( event ) {
@@ -1315,11 +1315,11 @@
 
 		// this === "<button> element"
 		.on( "click", you.test );
-	```
+```
 
 - **The JavaScript functions `call` and `apply` are other options**. The `call` method calls a function with a given this value and arguments provides individually. The `apply` method calls a function with a given this value and arguments provided as an array. A useful way to remember which is which... apply uses an array, both start with 'a'. Call/apply call the function immediately, whereas `bind` returns a function that will have the specified context when executed later.  Details on MDN for [call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply).
 
-	```javascript
+```javascript
 	// One use is chaining constructors
 	function Animal(name, weight) {
 
@@ -1362,7 +1362,7 @@
 			console.log('#' + i + ' ' + this.species + ': ' + this.name);
 		}).apply(animals[i], [i]);
 	}
-	```
+```
 
 <a name="accessors"></a>
 ## Accessors
@@ -1370,7 +1370,7 @@
 - Accessor functions for properties are not required.
 - If you do make accessor functions use getVal() and setVal('hello').
 
-	```javascript
+```javascript
 	// bad
 	dragon.age();
 
@@ -1382,11 +1382,11 @@
 
 	// good
 	dragon.setAge(25);
-	```
+```
 
 - If the property is a boolean, use isVal() or hasVal().
 
-	```javascript
+```javascript
 	// bad
 	if (!dragon.age()) {
 		return false;
@@ -1396,7 +1396,7 @@
 	if (!dragon.hasAge()) {
 		return false;
 	}
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1405,7 +1405,7 @@
 
 - Assign methods to the prototype object, instead of overwriting the prototype with a new object. Overwriting the prototype makes inheritance impossible: by resetting the prototype you'll overwrite the base!
 
-	```javascript
+```javascript
 	function Jedi() {
 
 		console.log('new jedi');
@@ -1434,11 +1434,11 @@
 
 		console.log('blocking');
 	};
-	```
+```
 
 - Methods can return `this` to help with method chaining.
 
-	```javascript
+```javascript
 	// bad
 	Jedi.prototype.jump = function() {
 
@@ -1472,12 +1472,12 @@
 
 	luke.jump()
 		.setHeight(20);
-	```
+```
 
 
 - It's okay to write a custom toString() method, just make sure it works successfully and causes no side effects.
 
-	```javascript
+```javascript
 	function Jedi(options) {
 
 		options || (options = {});
@@ -1493,7 +1493,7 @@
 
 		return 'Jedi - ' + this.getName();
 	};
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1502,7 +1502,7 @@
 
 - When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. Name the hash `data`. For example, instead of:
 
-	```js
+```js
 	// bad
 	$(this).trigger('listingUpdated', listing.id);
 
@@ -1512,11 +1512,11 @@
 
 		// do something with listingId
 	});
-	```
+```
 
 	prefer:
 
-	```js
+```js
 	// good
 	$(this).trigger('listingUpdated', { listingId : listing.id });
 
@@ -1526,7 +1526,7 @@
 
 		// do something with data.listingId
 	});
-	```
+```
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -1538,17 +1538,17 @@
 
 - Prefix jQuery object variables with a `$`.
 
-	```javascript
+```javascript
 	// bad
 	var sidebar = $('.sidebar');
 
 	// good
 	var $sidebar = $('.sidebar');
-	```
+```
 
 - Cache jQuery lookups.
 
-	```javascript
+```javascript
 	// bad
 	function setSidebar() {
 
@@ -1573,14 +1573,14 @@
 			'background-color': 'pink'
 		});
 	}
-	```
+```
 
 <a name="jquery-events"></a>
 ### jQuery Events
 
 - DO NOT use anonymous functions to attach events. [They're difficult to debug, maintain, test, or reuse](https://learn.jquery.com/code-organization/beware-anonymous-functions/). Use a function declaration instead. Take advantage of the fact that function declarations get hoisted to allow for events to be grouped higher up in the function, and handlers to be grouped below. This allows for quickly scanning through the events without weeding through their implementation.
 
-	```javascript
+```javascript
 	// bad
 	$(document).ready(function() {
 
@@ -1604,35 +1604,35 @@
 	function myLink1ClickHandler() {...}
 	function myLink2ClickHandler() {...}
 	function myLink3ClickHandler() {...}
-	```
+```
 
 - Don't mix JavaScript inline events with jQuery events. Favor jQuery events.
 
-	```javascript
+```javascript
 	// bad
 	<a id="myLink" href="#" onclick="myEventHandler();">my link</a>
 
 	// good
 	$("#myLink").on("click", myEventHandler);
-	```
+```
 
 - When unbinding events, use custom namespaces to avoid inadvertently detaching all events from an object.
 
-	```javascript
+```javascript
 	$("#myLink").on("click.mySpecialClick", myEventHandler);
 
 	// Later on, it's easier to unbind just your click event
 	$("#myLink").unbind("click.mySpecialClick");
-	```
+```
 - Use event delegation when attaching the same event to multiple elements. As stated [here](https://learn.jquery.com/events/event-delegation/), "Event delegation allows us to attach a single event listener, to a parent element, that will fire for all descendants matching a selector, whether those descendants exist now or are added in the future."
 
-	```javascript
+```javascript
 	// bad, you are attaching an event to all the links under the list.
 	$("#list a").on("click", myClickHandler);
 
 	// good, only one event handler is attached to the parent.
 	$("#list").on("click", "a", myClickHandler);
-	```
+```
 
 <a name="microsites"></a>
 ##Code Organization for micro sites
@@ -1641,7 +1641,7 @@
 - Put code for all plugins and polyfills into a plugins.js file. Paste in the minified version of the source with a comment that clearly states what plugin and
 	version it is.
 
-	```javascript
+```javascript
 	// On the page
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.js"></script>
@@ -1717,7 +1717,7 @@ Just don't go disabling eslint for all your stuff. That would be _**#losing**_.
 - Sublime plugin is [here](https://github.com/enginespot/js-beautify-sublime).
 	- After installation, the following config should be used under `Preferences -> Package Settings -> JavaScript Beautify -> Settings - User`
 
-	```json
+```json
 	{
 		"indent_size": 4,
 		"indent_char": "	",
@@ -1739,5 +1739,5 @@ Just don't go disabling eslint for all your stuff. That would be _**#losing**_.
 		"format_on_save": false,
 		"use_original_indentation": false
 	}
-	```
+```
 # };
