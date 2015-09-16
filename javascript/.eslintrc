@@ -73,7 +73,7 @@
 		"no-new-wrappers": 2,            // http://eslint.org/docs/rules/no-new-wrappers -- disallows creating new instances of String,Number, and Boolean
 		"no-octal": 2,                   // http://eslint.org/docs/rules/no-octal -- disallow use of octal literals (recommended)
 		"no-octal-escape": 2,            // http://eslint.org/docs/rules/no-octal-escape -- disallow use of octal escape sequences in string literals, such as var foo = "Copyright \251";
-		"no-param-reassign": 2,          // http://eslint.org/docs/rules/no-param-reassign -- disallow reassignment of function parameters
+		"no-param-reassign": 0,          // http://eslint.org/docs/rules/no-param-reassign -- disallow reassignment of function parameters
 		"no-proto": 2,                   // http://eslint.org/docs/rules/no-proto -- disallow usage of __proto__ property
 		"no-redeclare": 2,               // http://eslint.org/docs/rules/no-redeclare -- disallow declaring the same variable more than once (recommended)
 		"no-return-assign": 2,           // http://eslint.org/docs/rules/no-return-assign -- disallow use of assignment in return statement
