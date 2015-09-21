@@ -1688,7 +1688,10 @@
 	- NOTE: A config file in the project directory is required in order to lint according to our rules. There is no global config for eslint.
 - ESLint rules are [here](http://eslint.org/docs/rules/).
 
-####Note
+####Overriding config file
+If you need to override the config for a specific project, use the extending method mentioned on the eslint site [here](http://eslint.org/docs/user-guide/configuring#extending-configuration-files)
+
+####Ignoring lines
 If you ever find yourself needing to have eslint ignore a specific line (for a really good reason!),
 [this post](https://stackoverflow.com/questions/27732209/turning-off-eslint-rule-for-a-specific-line) can help.
 #####To ignore a specific rule on a single line (in this case, the "indent" rule):

@@ -4,7 +4,7 @@
 		"browser": true                  // browser global variables
 	},
 	"rules": {
-		"strict": [2, "global"],          // http://eslint.org/docs/rules/strict -- controls location of Use Strict Directives
+		"strict": [2, "function"],          // http://eslint.org/docs/rules/strict -- controls location of Use Strict Directives
 
 /**
  * Variables
@@ -56,7 +56,7 @@
 		"eqeqeq": 2,                     // http://eslint.org/docs/rules/eqeqeq -- require the use of === and !==
 		"guard-for-in": 0,               // http://eslint.org/docs/rules/guard-for-in -- do not make sure for-in loops have an if statement
 		"no-caller": 2,                  // http://eslint.org/docs/rules/no-caller -- disallow use of arguments.caller or arguments.callee
-		"no-else-return": 2,             // http://eslint.org/docs/rules/no-else-return -- disallow else after a return in an if
+		"no-else-return": 0,             // http://eslint.org/docs/rules/no-else-return -- disallow else after a return in an if
 		"no-eq-null": 0,                 // http://eslint.org/docs/rules/no-eq-null -- allow comparisons to null without a type-checking operator
 		"no-eval": 2,                    // http://eslint.org/docs/rules/no-eval -- disallow use of eval()
 		"no-extend-native": 2,           // http://eslint.org/docs/rules/no-extend-native -- disallow adding to native types
